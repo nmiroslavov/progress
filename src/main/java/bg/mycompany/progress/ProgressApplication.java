@@ -25,7 +25,6 @@ public class ProgressApplication {
     @Bean
     CommandLineRunner run(UserService userService) {
         return args -> {
-            userService.createTestUser();
         };
     }
 }
