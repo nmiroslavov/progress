@@ -1,6 +1,7 @@
 package bg.mycompany.progress;
 
 import bg.mycompany.progress.model.entity.UserEntity;
+import bg.mycompany.progress.service.RoleService;
 import bg.mycompany.progress.service.UserService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -23,8 +24,9 @@ public class ProgressApplication {
     }
 
     @Bean
-    CommandLineRunner run(UserService userService) {
+    CommandLineRunner run(RoleService roleService) {
         return args -> {
+            roleService.initRoles();
         };
     }
 }
