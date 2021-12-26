@@ -12,12 +12,16 @@ public class TaskEntity extends BaseEntity {
 
     @Column(name = "name", nullable = false)
     private String name;
+
     @Column(name = "description")
     private String description;
+
     @Column(name = "start_date_time")
     private Instant startDateTime;
+
     @Enumerated(EnumType.STRING)
     private PriorityEnum priority;
+
     @ManyToOne
     private UserEntity creator;
 }
